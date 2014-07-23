@@ -1,0 +1,35 @@
+/******************************************************************
+Este código para arduino, nos permite encender un LED al presionar
+un botón.
+
+Realizado por: Arturo Gómez
+
+Compañía: D'Sun Labs
+
+19/jul/2013
+******************************************************************/
+
+const int boton = 2;
+const int led = 7;
+
+int estadoBoton;
+
+void setup()
+{
+  pinMode(boton,INPUT);
+  pinMode(led,OUTPUT);
+}
+
+void loop()
+{
+  estadoBoton = digitalRead(boton);
+  
+  if(estadoBoton == HIGH)
+  {
+    digitalWrite(led,HIGH);
+  }
+  else
+  {
+    digitalWrite(led,LOW);
+  }
+}
